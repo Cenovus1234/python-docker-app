@@ -5,14 +5,14 @@ node{
       }
       
     stage("Docker Build"){
-     def app = docker.build "manee2k6/padmavathy"
+     def app = docker.build "mtanweer/padmavathy"
      }
     
     stage("Tag & Push image"){
        withDockerRegistry([credentialsId: 'DockerID', url: 'https://hub.docker.com']) {
-          sh 'docker tag manee2k6/padmavathy manee2k6/padmavathy:001'
-          sh 'docker push manee2k6/padmavathy:latest'
-          sh 'docker push manee2k6/padmavathy:001'
+          sh 'docker tag mtanweer/padmavathy manee2k6/padmavathy:008'
+          sh 'docker push mtanweer/padmavathy:latest'
+          sh 'docker push mtanweer/padmavathy:009'
       }
     }
     
