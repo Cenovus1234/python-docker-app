@@ -11,8 +11,8 @@ node{
     stage("Tag & Push image"){
        withDockerRegistry([credentialsId: 'DockerID', url: 'https://hub.docker.com']) {
           sh 'docker tag Cenovus mtanweer1/cenovus:1.0'
-          sh 'docker push mtanweer1/Cenovus1234:latest'
-          sh 'docker push mtanweer1/Cenovus1234:009'
+          sh 'docker push mtanweer1/cenovus1234:latest'
+          sh 'docker push mtanweer1/cenovus1234:009'
       }
     }
     
