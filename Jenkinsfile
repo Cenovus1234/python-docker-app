@@ -5,12 +5,12 @@ node{
       }
       
     stage("Docker Build"){
-     def app = docker.build "mtanweer/Cenovus1234"
+     def app = docker.build "mtanweer1/cenovus1234"
      }
     
     stage("Tag & Push image"){
        withDockerRegistry([credentialsId: 'DockerID', url: 'https://hub.docker.com']) {
-          sh 'docker tag Cenovus mtanweer/Cenovus:1.0'
+          sh 'docker tag Cenovus mtanweer1/cenovus:1.0'
           sh 'docker push mtanweer1/Cenovus1234:latest'
           sh 'docker push mtanweer1/Cenovus1234:009'
       }
