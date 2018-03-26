@@ -12,7 +12,7 @@ node{
        withDockerRegistry([credentialsId: 'DockerID', url: 'https://hub.docker.com']) {
           sh 'docker tag jenkins-docker mtanweer/my_image:1.0'
           sh 'docker push jenkins-docker mtanweer/cenovus1234:latest'
-          sh 'docker push jenkins-docker mtanweer/cenovus1234:009'
+         
       }
     }
     
