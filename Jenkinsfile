@@ -1,7 +1,7 @@
 node{
    stage("App Build started"){
       echo 'App build started..'
-      git 'https://github.com/Cenovus1234/python-docker-app.git'
+      git 'https://github.com/cenovus1234/python-docker-app.git'
       }
       
     stage("Docker Build"){
@@ -10,7 +10,7 @@ node{
     
     stage("Tag & Push image"){
        withDockerRegistry([credentialsId: 'DockerID', url: 'https://hub.docker.com']) {
-          sh 'docker tag Cenovus mtanweer1/cenovus:1.0'
+          sh 'docker tag cenovus mtanweer1/cenovus:1.0'
           sh 'docker push mtanweer1/cenovus1234:latest'
           sh 'docker push mtanweer1/cenovus1234:009'
       }
